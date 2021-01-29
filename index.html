@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>React Portfolio</title>
+</head>
+<body>
+
+    <div id= 'application-root'>
+
+    </div>
+
+<script
+  src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+
+<script type = 'text/babel'>
+
+function App(){
+    return (
+        <div>
+            <header>
+                <h1>Sally Student</h1>
+            </header>
+            <main>
+                <section id = 'About-me'>
+                    <img src={'photo.jpg'} alt= {'photo'} className = 'photo'></img>
+                    <p>Hello! My name is Sally and I am 21 years old! Welcome to my portfolio, below you will be able to find more out more about me!</p>
+                </section>
+
+                <section id = 'Education'>
+                    <h2>I have studied at:</h2>
+                    <ul>
+                        <li>Penn State University</li>
+                        <ul>
+                            <li>Major: Computer Science</li>
+                        </ul>
+                        <li>Abraham Lincoln High</li>
+                        <ul>
+                            <li>Major: High School Diploma</li>
+                        </ul>
+                    </ul>
+                </section>
+
+                <section id = 'Work'>
+                    <h2>I have worked at:</h2>
+                    <div className = 'works-list'>
+                        <ul>
+                            <li><h3>Apple Inc.</h3></li>
+                            <li>Software Engineer</li>
+                            <li>Worked From: February 2019 - Present</li>
+                            <li><p>At this job I was responsible for writing and maintaining clean, coherent code</p></li>
+                        </ul>
+
+                        <ul>
+                            <li><h3>Google</h3></li>
+                            <li>Software Engineer</li>
+                            <li>Worked From: June 2018 - February 2019</li>
+                            <li><p>At this job I was responsible for writing and maintaining clean, coherent code</p></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id = 'Contact'>
+                    <h2>My Contact Information</h2>
+                    <address className = 'contact-info'>
+                        <p>My name is Sally</p>
+                        <p>My email is: <a href="mailto://sally@IntenetExplorer.old">sally@IntenetExplorer.old</a></p>
+                        <p>My phone number is: <a href="tel:+34100572415">+34 100 57 24 15</a></p>
+                    </address>
+                </section>
+            </main>
+        </div>
+    )
+
+}
+
+
+
+ReactDOM.render(
+    <App />,
+    document.querySelector('#application-root')
+);
+</script>
+</body>
+</html>
